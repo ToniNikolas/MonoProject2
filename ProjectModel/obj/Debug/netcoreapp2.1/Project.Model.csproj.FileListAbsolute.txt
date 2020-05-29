@@ -1,0 +1,12 @@
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\bin\Debug\netcoreapp2.1\Project.Model.deps.json
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\bin\Debug\netcoreapp2.1\Project.Model.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\bin\Debug\netcoreapp2.1\Project.Model.pdb
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.csproj.CoreCompileInputs.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.AssemblyInfoInputs.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.AssemblyInfo.cs
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.pdb
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.csprojAssemblyReference.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel\obj\Debug\netcoreapp2.1\Project.Model.csproj.CopyComplete

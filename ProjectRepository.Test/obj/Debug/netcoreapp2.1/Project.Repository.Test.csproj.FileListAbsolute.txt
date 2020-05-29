@@ -1,0 +1,14 @@
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Project.Repository.Test.deps.json
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Project.Repository.Test.runtimeconfig.json
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Project.Repository.Test.runtimeconfig.dev.json
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Project.Repository.Test.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\bin\Debug\netcoreapp2.1\Project.Repository.Test.pdb
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.csprojAssemblyReference.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.csproj.CoreCompileInputs.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.AssemblyInfoInputs.cache
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.AssemblyInfo.cs
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.dll
+C:\Users\tonin\source\repos\ProjectWebApi\ProjectRepository.Test\obj\Debug\netcoreapp2.1\Project.Repository.Test.pdb
