@@ -25,3 +25,4 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Test\obj\Deb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Test\obj\Debug\netcoreapp2.1\Project.Service.Test.AssemblyInfo.cs
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Test\obj\Debug\netcoreapp2.1\Project.Service.Test.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Test\obj\Debug\netcoreapp2.1\Project.Service.Test.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Test\obj\Debug\netcoreapp2.1\Project.Service.Test.csprojAssemblyReference.cache

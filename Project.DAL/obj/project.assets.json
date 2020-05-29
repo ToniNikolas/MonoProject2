@@ -3471,8 +3471,8 @@
     },
     "Project.DAL.Common/1.0.0": {
       "type": "project",
-      "path": "../Project.Common/Project.DAL.Common.csproj",
-      "msbuildProject": "../Project.Common/Project.DAL.Common.csproj"
+      "path": "../Project.DAL.Common/Project.DAL.Common.csproj",
+      "msbuildProject": "../Project.DAL.Common/Project.DAL.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3513,8 +3513,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj": {
-              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj"
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj"
             }
           }
         }

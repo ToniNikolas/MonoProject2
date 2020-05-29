@@ -32,6 +32,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
+          "Project.Repository": "1.0.0",
+          "Project.Repository.Common": "1.0.0",
           "Project.Service": "1.0.0",
           "Project.Service.Common": "1.0.0"
         },
@@ -603,8 +605,6 @@
       },
       "Project.Service/1.0.0": {
         "dependencies": {
-          "Project.Repository": "1.0.0",
-          "Project.Repository.Common": "1.0.0",
           "Project.Service.Common": "1.0.0"
         },
         "runtime": {

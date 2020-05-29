@@ -17,9 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Project.Service.csproj" />
-    <ProjectReference Include="..\Project.Common\Project.DAL.Common.csproj" />
+    <ProjectReference Include="..\Project.DAL.Common\Project.DAL.Common.csproj" />
     <ProjectReference Include="..\Project.DAL\Project.DAL.csproj" />
+    <ProjectReference Include="..\Project.Service\Project.Service.csproj" />
+    <ProjectReference Include="..\ProjectRepository.Common\Project.Repository.Common.csproj" />
+    <ProjectReference Include="..\ProjectRepository\Project.Repository.csproj" />
     <ProjectReference Include="..\ProjectService.Common\Project.Service.Common.csproj" />
   </ItemGroup>
 

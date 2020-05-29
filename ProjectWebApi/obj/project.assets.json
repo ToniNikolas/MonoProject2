@@ -4703,8 +4703,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Project.Repository": "1.0.0",
-          "Project.Repository.Common": "1.0.0",
           "Project.Service.Common": "1.0.0"
         },
         "compile": {
@@ -12699,8 +12697,8 @@
     },
     "Project.DAL.Common/1.0.0": {
       "type": "project",
-      "path": "../Project.Common/Project.DAL.Common.csproj",
-      "msbuildProject": "../Project.Common/Project.DAL.Common.csproj"
+      "path": "../Project.DAL.Common/Project.DAL.Common.csproj",
+      "msbuildProject": "../Project.DAL.Common/Project.DAL.Common.csproj"
     },
     "Project.Repository/1.0.0": {
       "type": "project",
@@ -12714,8 +12712,8 @@
     },
     "Project.Service/1.0.0": {
       "type": "project",
-      "path": "../ClassLibrary1/Project.Service.csproj",
-      "msbuildProject": "../ClassLibrary1/Project.Service.csproj"
+      "path": "../Project.Service/Project.Service.csproj",
+      "msbuildProject": "../Project.Service/Project.Service.csproj"
     },
     "Project.Service.Common/1.0.0": {
       "type": "project",
@@ -12733,6 +12731,8 @@
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
       "Project.DAL >= 1.0.0",
       "Project.DAL.Common >= 1.0.0",
+      "Project.Repository >= 1.0.0",
+      "Project.Repository.Common >= 1.0.0",
       "Project.Service >= 1.0.0",
       "Project.Service.Common >= 1.0.0"
     ]
@@ -12767,14 +12767,20 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ClassLibrary1\\Project.Service.csproj": {
-              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ClassLibrary1\\Project.Service.csproj"
-            },
-            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj": {
-              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj"
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj"
             },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL\\Project.DAL.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL\\Project.DAL.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Service\\Project.Service.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Service\\Project.Service.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository\\Project.Repository.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository\\Project.Repository.csproj"
             },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj"

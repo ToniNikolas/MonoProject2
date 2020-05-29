@@ -15,10 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Project.DAL.Migrations;
-using Project.Service;
 using Project.Service.Common;
 using Project.Repository;
 using Project.Repository.Common;
+using Project.Service;
 
 namespace ProjectWebApi
 {

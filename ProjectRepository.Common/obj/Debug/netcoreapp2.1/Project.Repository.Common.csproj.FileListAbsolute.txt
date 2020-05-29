@@ -15,3 +15,4 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository.Common\ob
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository.Common\obj\Debug\netcoreapp2.1\Project.Repository.Common.AssemblyInfo.cs
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository.Common\obj\Debug\netcoreapp2.1\Project.Repository.Common.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository.Common\obj\Debug\netcoreapp2.1\Project.Repository.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository.Common\obj\Debug\netcoreapp2.1\Project.Repository.Common.csprojAssemblyReference.cache
