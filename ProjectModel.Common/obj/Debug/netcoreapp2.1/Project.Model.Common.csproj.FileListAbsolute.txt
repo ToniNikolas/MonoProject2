@@ -7,3 +7,12 @@ C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel.Common\obj\Debug\netcorea
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.AssemblyInfo.cs
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.dll
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\bin\Debug\netcoreapp2.1\Project.Model.Common.deps.json
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.csproj.CoreCompileInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.AssemblyInfoInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.AssemblyInfo.cs
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectModel.Common\obj\Debug\netcoreapp2.1\Project.Model.Common.csprojAssemblyReference.cache

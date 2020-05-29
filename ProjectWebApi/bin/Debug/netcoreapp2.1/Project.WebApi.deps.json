@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "012b6c5c775f0fe20a749d3db65a0381a5d97fad"
+    "signature": "91774b8d42874b2d651256b596b2a8b36e8a94b3"
   },
   "compilationOptions": {
     "defines": [
@@ -25,11 +25,15 @@
       "Project.WebApi/1.0.0": {
         "dependencies": {
           "Autofac": "5.2.0",
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.Razor.Design": "2.1.2",
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
-          "Project.DAL": "1.0.0"
+          "Project.DAL": "1.0.0",
+          "Project.DAL.Common": "1.0.0",
+          "Project.Service": "1.0.0",
+          "Project.Service.Common": "1.0.0"
         },
         "runtime": {
           "Project.WebApi.dll": {}
@@ -50,6 +54,22 @@
         },
         "compile": {
           "lib/netstandard2.0/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/6.0.0": {
+        "dependencies": {
+          "Autofac": "5.2.0",
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "Microsoft.AspNetCore.Razor.Design/2.1.2": {},
@@ -560,6 +580,46 @@
         },
         "compile": {
           "Project.DAL.Common.dll": {}
+        }
+      },
+      "Project.Repository/1.0.0": {
+        "dependencies": {
+          "Project.Repository.Common": "1.0.0"
+        },
+        "runtime": {
+          "Project.Repository.dll": {}
+        },
+        "compile": {
+          "Project.Repository.dll": {}
+        }
+      },
+      "Project.Repository.Common/1.0.0": {
+        "runtime": {
+          "Project.Repository.Common.dll": {}
+        },
+        "compile": {
+          "Project.Repository.Common.dll": {}
+        }
+      },
+      "Project.Service/1.0.0": {
+        "dependencies": {
+          "Project.Repository": "1.0.0",
+          "Project.Repository.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
+        },
+        "runtime": {
+          "Project.Service.dll": {}
+        },
+        "compile": {
+          "Project.Service.dll": {}
+        }
+      },
+      "Project.Service.Common/1.0.0": {
+        "runtime": {
+          "Project.Service.Common.dll": {}
+        },
+        "compile": {
+          "Project.Service.Common.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3517,6 +3577,13 @@
       "path": "autofac/5.2.0",
       "hashPath": "autofac.5.2.0.nupkg.sha512"
     },
+    "Autofac.Extensions.DependencyInjection/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+1WNYENm4s/bSBrmTy2sD0zs6MCiCAlUaEbHJ+y7fKpXKqnFl4oTkIkUoDKlp05dl1VoAASBUJocaKKJa1KPCw==",
+      "path": "autofac.extensions.dependencyinjection/6.0.0",
+      "hashPath": "autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Razor.Design/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3712,6 +3779,26 @@
       "sha512": ""
     },
     "Project.DAL.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Repository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Repository.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Service.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -12,3 +12,17 @@ C:\Users\tonin\source\repos\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreap
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.AssemblyInfo.cs
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.dll
 C:\Users\tonin\source\repos\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Project.WebApi.Test.deps.json
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Project.WebApi.Test.runtimeconfig.json
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Project.WebApi.Test.runtimeconfig.dev.json
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Project.WebApi.Test.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\bin\Debug\netcoreapp2.1\Project.WebApi.Test.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.csproj.CoreCompileInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.AssemblyInfoInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.AssemblyInfo.cs
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi.Test\obj\Debug\netcoreapp2.1\Project.WebApi.Test.csprojAssemblyReference.cache

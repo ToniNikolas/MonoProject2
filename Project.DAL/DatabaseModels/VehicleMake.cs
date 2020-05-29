@@ -1,4 +1,5 @@
-﻿using Project.DAL.Common.DatabaseInterfaces;
+﻿
+using Project.DAL.Common.DatabaseInterfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

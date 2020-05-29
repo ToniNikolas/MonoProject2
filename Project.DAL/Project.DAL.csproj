@@ -10,10 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\Project.Service.csproj" />
-    <ProjectReference Include="..\ProjectRepository.Common\Project.Repository.Common.csproj" />
-    <ProjectReference Include="..\ProjectRepository\Project.Repository.csproj" />
-    <ProjectReference Include="..\ProjectService.Common\Project.Service.Common.csproj" />
+    <ProjectReference Include="..\Project.Common\Project.DAL.Common.csproj" />
   </ItemGroup>
 
 </Project>

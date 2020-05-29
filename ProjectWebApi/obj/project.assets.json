@@ -4657,16 +4657,23 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
-          "Project.Repository": "1.0.0",
-          "Project.Repository.Common": "1.0.0",
-          "Project.Service": "1.0.0",
-          "Project.Service.Common": "1.0.0"
+          "Project.DAL.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Project.DAL.dll": {}
         },
         "runtime": {
           "bin/placeholder/Project.DAL.dll": {}
+        }
+      },
+      "Project.DAL.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Project.DAL.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.DAL.Common.dll": {}
         }
       },
       "Project.Repository/1.0.0": {
@@ -4696,6 +4703,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Project.Repository": "1.0.0",
+          "Project.Repository.Common": "1.0.0",
           "Project.Service.Common": "1.0.0"
         },
         "compile": {
@@ -12688,6 +12697,11 @@
       "path": "../Project.DAL/Project.DAL.csproj",
       "msbuildProject": "../Project.DAL/Project.DAL.csproj"
     },
+    "Project.DAL.Common/1.0.0": {
+      "type": "project",
+      "path": "../Project.Common/Project.DAL.Common.csproj",
+      "msbuildProject": "../Project.Common/Project.DAL.Common.csproj"
+    },
     "Project.Repository/1.0.0": {
       "type": "project",
       "path": "../ProjectRepository/Project.Repository.csproj",
@@ -12717,7 +12731,10 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.9",
-      "Project.DAL >= 1.0.0"
+      "Project.DAL >= 1.0.0",
+      "Project.DAL.Common >= 1.0.0",
+      "Project.Service >= 1.0.0",
+      "Project.Service.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12750,8 +12767,17 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ClassLibrary1\\Project.Service.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ClassLibrary1\\Project.Service.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.DAL.Common.csproj"
+            },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL\\Project.DAL.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL\\Project.DAL.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj"
             }
           }
         }
