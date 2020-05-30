@@ -207,6 +207,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "Project.Model.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Project.Model.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Model.Common.dll": {}
+        }
       }
     }
   },
@@ -680,11 +690,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "Project.Model.Common/1.0.0": {
+      "type": "project",
+      "path": "../ProjectModel.Common/Project.Model.Common.csproj",
+      "msbuildProject": "../ProjectModel.Common/Project.Model.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Project.Model.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -716,7 +732,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectModel.Common\\Project.Model.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectModel.Common\\Project.Model.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

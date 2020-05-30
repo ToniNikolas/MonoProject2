@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using AutoMapper;
 using IContainer = Autofac.IContainer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,8 @@ using Project.Service.Common;
 using Project.Repository;
 using Project.Repository.Common;
 using Project.Service;
+using Project.Service.Automapper;
+using Project.Repository.Automapper;
 
 namespace ProjectWebApi
 {
@@ -47,6 +50,14 @@ namespace ProjectWebApi
             builder.RegisterType<ModelRepository>().As<IModelRepository>();
             this.ApplicationContainer = builder.Build();
 
+            //automapper
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperService());
+                cfg.AddProfile(new AutoMapperRepository());
+            });
+            var mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);
         }
