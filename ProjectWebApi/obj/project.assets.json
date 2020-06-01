@@ -4718,6 +4718,10 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Autofac": "5.2.0",
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
+          "Project.DAL": "1.0.0",
+          "Project.DAL.Common": "1.0.0",
           "Project.Repository.Common": "1.0.0"
         },
         "compile": {
@@ -4746,6 +4750,9 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Autofac": "5.2.0",
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
+          "Project.Repository.Common": "1.0.0",
           "Project.Service.Common": "1.0.0"
         },
         "compile": {

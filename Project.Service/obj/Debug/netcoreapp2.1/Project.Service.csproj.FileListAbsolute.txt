@@ -10,3 +10,7 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\obj\Debug\n
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\obj\Debug\netcoreapp2.1\Project.Service.csproj.CopyComplete
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\obj\Debug\netcoreapp2.1\Project.Service.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\obj\Debug\netcoreapp2.1\Project.Service.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\bin\Debug\netcoreapp2.1\Project.Repository.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Service\bin\Debug\netcoreapp2.1\Project.Repository.Common.pdb

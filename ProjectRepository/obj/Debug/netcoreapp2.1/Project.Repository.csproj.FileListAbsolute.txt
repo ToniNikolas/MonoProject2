@@ -19,3 +19,9 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\obj\Debug
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\obj\Debug\netcoreapp2.1\Project.Repository.csproj.CopyComplete
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\obj\Debug\netcoreapp2.1\Project.Repository.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\obj\Debug\netcoreapp2.1\Project.Repository.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.DAL.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.DAL.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.DAL.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectRepository\bin\Debug\netcoreapp2.1\Project.DAL.pdb

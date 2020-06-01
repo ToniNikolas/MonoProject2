@@ -13,7 +13,7 @@ namespace Project.DAL.Migrations
         public DbSet<VehicleMake> VehicleMakes { get; set; }
         public DbSet<VehicleModel> VehicleModels { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+       protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<VehicleMake>().ToTable("VehicleMake")
              .HasMany(p => p.VehicleModels)

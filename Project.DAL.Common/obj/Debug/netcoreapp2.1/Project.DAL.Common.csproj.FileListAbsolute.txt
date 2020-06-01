@@ -6,4 +6,3 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.DAL.Common\obj\Debu
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.DAL.Common\obj\Debug\netcoreapp2.1\Project.DAL.Common.AssemblyInfo.cs
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.DAL.Common\obj\Debug\netcoreapp2.1\Project.DAL.Common.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.DAL.Common\obj\Debug\netcoreapp2.1\Project.DAL.Common.pdb
-C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.DAL.Common\obj\Debug\netcoreapp2.1\Project.DAL.Common.csprojAssemblyReference.cache

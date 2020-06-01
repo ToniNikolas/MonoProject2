@@ -22,6 +22,7 @@ using Project.Repository.Common;
 using Project.Service;
 using Project.Service.Automapper;
 using Project.Repository.Automapper;
+using Project.WebApi.AutoMapper;
 
 namespace ProjectWebApi
 {
@@ -40,7 +41,15 @@ namespace ProjectWebApi
         {
             services.AddDbContext<VehicleDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), x => x.MigrationsAssembly("Project.DAL")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
+            //automapper
+            var config = new AutoMapper.MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new AutoMapperService());
+                cfg.AddProfile(new AutoMapperRepository());
+                cfg.AddProfile(new AutoMapperApi());
+            });
+            var mapper = config.CreateMapper();
+            services.AddSingleton(mapper);
             // Autofac
             var builder = new ContainerBuilder();
             builder.Populate(services);
@@ -49,17 +58,13 @@ namespace ProjectWebApi
             builder.RegisterType<MakeRepository>().As<IMakeRepository>();
             builder.RegisterType<ModelRepository>().As<IModelRepository>();
             this.ApplicationContainer = builder.Build();
-
-            //automapper
-            var config = new AutoMapper.MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperService());
-                cfg.AddProfile(new AutoMapperRepository());
-            });
-            var mapper = config.CreateMapper();
-            services.AddSingleton(mapper);
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);
+
+         
+          
+           
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

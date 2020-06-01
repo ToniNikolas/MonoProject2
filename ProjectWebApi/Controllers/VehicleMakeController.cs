@@ -1,21 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project.Service.Common;
+using Project.WebApi.ViewModels;
 
 namespace Project.WebApi.Controllers
-{
-    [Route("api/[controller]")]
+{ 
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class VehicleMakeController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly IMakeService service;
+        private readonly IMapper mapper;
+
+        public VehicleMakeController(IMakeService _service, IMapper _mapper)
         {
-            return new string[] { "value1", "value2" };
+            service = _service;
+            mapper = _mapper;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            List<VehicleMakeView> items = mapper.Map<List<VehicleMakeView>>(await service.GetAllMakes());
+            return Ok(items);
+        }
+
 
         // GET api/values/5
         [HttpGet("{id}")]

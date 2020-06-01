@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "Project.Service.Common/1.0.0": {
+        "dependencies": {
+          "Project.Model.Common": "1.0.0"
+        },
         "runtime": {
           "Project.Service.Common.dll": {}
+        }
+      },
+      "Project.Model.Common/1.0.0": {
+        "runtime": {
+          "Project.Model.Common.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Project.Service.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Model.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

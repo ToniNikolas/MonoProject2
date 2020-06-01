@@ -54,3 +54,5 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\net
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.csproj.CopyComplete
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
