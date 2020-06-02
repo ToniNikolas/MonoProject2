@@ -1,5 +1,5 @@
 ﻿using Project.Model.Common.DomainInterfaces;
-using Project.Repository.Common;
+using Project.Repository.Common.IRepositories;
 using Project.Service.Common;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace Project.Service
             repository = _repository;
         }
 
-        public async Task<List<IVehicleMakeDomain>> GetAllMakes()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
         {
                 return await repository.GetAllMakes();
         }

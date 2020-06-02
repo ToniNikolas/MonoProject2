@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Project.DAL.Common.DatabaseInterfaces;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Project.Repository.Automapper
     {
         public AutoMapperRepository()
            {
-
+            CreateMap<IVehicleMakeDomain,  VehicleMake>().ReverseMap();
             CreateMap<IVehicleMakeDomain, IVehicleMake>().ReverseMap();
-            }
+           }
 
 
         }

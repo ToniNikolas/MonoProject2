@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.Repository.Common
+namespace Project.Repository.Common.IRepositories
 {
    public interface IModelRepository
     {

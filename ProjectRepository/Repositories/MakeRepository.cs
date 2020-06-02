@@ -5,31 +5,29 @@ using Project.DAL.Common.DatabaseInterfaces;
 using Project.DAL.DatabaseModels;
 using Project.DAL.Migrations;
 using Project.Model.Common.DomainInterfaces;
-using Project.Repository.Common;
+using Project.Repository.Common.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.Repository
+namespace Project.Repositories.Repository
 {
     public class MakeRepository : IMakeRepository
     {
-        private readonly VehicleDbContext context;
+        private readonly IRepository<VehicleMake> repository;
         private readonly IMapper mapper;
 
-        public MakeRepository(VehicleDbContext _context, IMapper _mapper)
+        public MakeRepository(IRepository<VehicleMake> _repository, IMapper _mapper)
         {
-            context = _context;
+            repository = _repository;
             mapper = _mapper;
         }
        
-
-        public async Task<List<IVehicleMakeDomain>> GetAllMakes()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
         {
-            
-            List<IVehicleMakeDomain> vehicles = mapper.Map<List<IVehicleMakeDomain>>(await context.VehicleMakes.ToListAsync());
+            IEnumerable<IVehicleMakeDomain> vehicles = mapper.Map<IEnumerable<IVehicleMakeDomain>>(await repository.GetAll());
             return  vehicles;
         }
 

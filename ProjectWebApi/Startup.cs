@@ -17,12 +17,15 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Project.DAL.Migrations;
 using Project.Service.Common;
-using Project.Repository;
-using Project.Repository.Common;
+using Project.Repository.Repositories;
+using Project.Repository.Common.IRepositories;
 using Project.Service;
 using Project.Service.Automapper;
 using Project.Repository.Automapper;
 using Project.WebApi.AutoMapper;
+using Project.Repositories.Repository;
+using Project.DAL.Common.DatabaseInterfaces;
+using Project.DAL.DatabaseModels;
 
 namespace ProjectWebApi
 {
@@ -57,6 +60,8 @@ namespace ProjectWebApi
             builder.RegisterType<ModelService>().As<IModelService>();
             builder.RegisterType<MakeRepository>().As<IMakeRepository>();
             builder.RegisterType<ModelRepository>().As<IModelRepository>();
+            builder.RegisterType<Repository<VehicleMake>>().As<IRepository<VehicleMake>>();
+            builder.RegisterType<Repository<VehicleModel>>().As<IRepository<VehicleModel>>();
             this.ApplicationContainer = builder.Build();
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);

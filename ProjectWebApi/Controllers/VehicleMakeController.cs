@@ -27,7 +27,7 @@ namespace Project.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            List<VehicleMakeView> items = mapper.Map<List<VehicleMakeView>>(await service.GetAllMakes());
+            IEnumerable<VehicleMakeView> items = mapper.Map<IEnumerable<VehicleMakeView>>(await service.GetAllMakes());
             return Ok(items);
         }
 

@@ -8,7 +8,7 @@ namespace Project.Service.Common
 {
    public interface IMakeService
     {
-        Task<List<IVehicleMakeDomain>> GetAllMakes();
+        Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes();
         Task InsertMake(IVehicleMakeDomain vehicleMake);
         Task UpdateMake(IVehicleMakeDomain vehicleMake);
         Task DeleteMake(Guid? id);

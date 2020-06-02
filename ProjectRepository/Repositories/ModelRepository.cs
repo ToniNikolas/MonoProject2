@@ -1,11 +1,11 @@
 ﻿using Project.Model.Common.DomainInterfaces;
-using Project.Repository.Common;
+using Project.Repository.Common.IRepositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.Repository
+namespace Project.Repositories.Repository
 {
     public class ModelRepository : IModelRepository
     {
