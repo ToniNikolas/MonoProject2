@@ -11,8 +11,8 @@ namespace Project.Repository.Common.IRepositories
         Task<IEnumerable<T>> GetAll();
         Task Insert(T entity);
         Task Update(T entity);
-        Task Delete(object id);
-        Task<T> GetId(object id);
+        Task Delete(Guid? id);
+        Task<T> GetId(Guid? id);
         List<T> GetMakeList();
 
     }

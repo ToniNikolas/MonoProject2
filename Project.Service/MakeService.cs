@@ -1,4 +1,5 @@
 ﻿using Project.Model.Common.DomainInterfaces;
+using Project.Repository.Common;
 using Project.Repository.Common.IRepositories;
 using Project.Service.Common;
 using System;
@@ -11,16 +12,16 @@ namespace Project.Service
 {
     public class MakeService : IMakeService
     {
-        private readonly IMakeRepository repository;
+        private readonly IUnitOfWork unitOfWork;
 
-        public MakeService(IMakeRepository _repository)
+        public MakeService(IUnitOfWork _unitOfWork)
         {
-            repository = _repository;
+            unitOfWork = _unitOfWork;
         }
 
         public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
         {
-                return await repository.GetAllMakes();
+            return await unitOfWork.Makes.GetAllMakes();
         }
 
         public Task DeleteMake(Guid? id)

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Project.DAL.Migrations;
+using Project.Repository.Common;
 using Project.Repository.Common.IRepositories;
 using System;
 using System.Collections.Generic;
@@ -20,18 +21,17 @@ namespace Project.Repository.Repositories
         }
         public async Task<IEnumerable<T>> GetAll()
         {
-          IEnumerable<T> vehicles = await table.ToListAsync();
+          IEnumerable<T> vehicles = await table.ToListAsync(); 
           return vehicles;
         }
 
-
-        public Task Delete(object id)
+        public Task Delete(Guid? id)
         {
             throw new NotImplementedException();
         }
 
        
-        public Task<T> GetId(object id)
+        public Task<T> GetId(Guid? id)
         {
             throw new NotImplementedException();
         }

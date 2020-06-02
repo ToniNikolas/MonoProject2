@@ -13,7 +13,6 @@ namespace Project.Repository.Automapper
         public AutoMapperRepository()
            {
             CreateMap<IVehicleMakeDomain,  VehicleMake>().ReverseMap();
-            CreateMap<IVehicleMakeDomain, IVehicleMake>().ReverseMap();
            }
 
 

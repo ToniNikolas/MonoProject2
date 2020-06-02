@@ -26,6 +26,8 @@ using Project.WebApi.AutoMapper;
 using Project.Repositories.Repository;
 using Project.DAL.Common.DatabaseInterfaces;
 using Project.DAL.DatabaseModels;
+using Project.Repository;
+using Project.Repository.Common;
 
 namespace ProjectWebApi
 {
@@ -62,6 +64,7 @@ namespace ProjectWebApi
             builder.RegisterType<ModelRepository>().As<IModelRepository>();
             builder.RegisterType<Repository<VehicleMake>>().As<IRepository<VehicleMake>>();
             builder.RegisterType<Repository<VehicleModel>>().As<IRepository<VehicleModel>>();
+            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
             this.ApplicationContainer = builder.Build();
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);
