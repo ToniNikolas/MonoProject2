@@ -1014,6 +1014,26 @@
           "bin/placeholder/Project.Model.Common.dll": {}
         }
       },
+      "Project.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Autofac": "5.2.0",
+          "Autofac.Extensions.DependencyInjection": "6.0.0",
+          "Project.DAL": "1.0.0",
+          "Project.DAL.Common": "1.0.0",
+          "Project.Repository.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Project.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Repository.dll": {}
+        }
+      },
       "Project.Repository.Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -3783,6 +3803,11 @@
       "path": "../ProjectModel.Common/Project.Model.Common.csproj",
       "msbuildProject": "../ProjectModel.Common/Project.Model.Common.csproj"
     },
+    "Project.Repository/1.0.0": {
+      "type": "project",
+      "path": "../ProjectRepository/Project.Repository.csproj",
+      "msbuildProject": "../ProjectRepository/Project.Repository.csproj"
+    },
     "Project.Repository.Common/1.0.0": {
       "type": "project",
       "path": "../ProjectRepository.Common/Project.Repository.Common.csproj",
@@ -3801,6 +3826,7 @@
       "Autofac >= 5.2.0",
       "Autofac.Extensions.DependencyInjection >= 6.0.0",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Project.Repository >= 1.0.0",
       "Project.Repository.Common >= 1.0.0",
       "Project.Service.Common >= 1.0.0"
     ]
@@ -3837,6 +3863,9 @@
           "projectReferences": {
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository\\Project.Repository.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository\\Project.Repository.csproj"
             },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj"

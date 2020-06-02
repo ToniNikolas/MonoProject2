@@ -1028,6 +1028,19 @@
         "runtime": {
           "bin/placeholder/Project.Repository.Common.dll": {}
         }
+      },
+      "Project.Service.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Project.Model.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Project.Service.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Service.Common.dll": {}
+        }
       }
     }
   },
@@ -3774,6 +3787,11 @@
       "type": "project",
       "path": "../ProjectRepository.Common/Project.Repository.Common.csproj",
       "msbuildProject": "../ProjectRepository.Common/Project.Repository.Common.csproj"
+    },
+    "Project.Service.Common/1.0.0": {
+      "type": "project",
+      "path": "../ProjectService.Common/Project.Service.Common.csproj",
+      "msbuildProject": "../ProjectService.Common/Project.Service.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3785,7 +3803,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Project.DAL >= 1.0.0",
       "Project.DAL.Common >= 1.0.0",
-      "Project.Repository.Common >= 1.0.0"
+      "Project.Repository.Common >= 1.0.0",
+      "Project.Service.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3826,6 +3845,9 @@
             },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectRepository.Common\\Project.Repository.Common.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj"
             }
           }
         }

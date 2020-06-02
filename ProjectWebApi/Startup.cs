@@ -20,14 +20,14 @@ using Project.Service.Common;
 using Project.Repository.Repositories;
 using Project.Repository.Common.IRepositories;
 using Project.Service;
-using Project.Service.Automapper;
-using Project.Repository.Automapper;
-using Project.WebApi.AutoMapper;
 using Project.Repositories.Repository;
 using Project.DAL.Common.DatabaseInterfaces;
 using Project.DAL.DatabaseModels;
 using Project.Repository;
 using Project.Repository.Common;
+using Project.Service.DependencyResolver;
+using Project.Repository.DependencyResolver;
+using Project.WebApi.DependencyResolver;
 
 namespace ProjectWebApi
 {
@@ -48,30 +48,20 @@ namespace ProjectWebApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             //automapper
             var config = new AutoMapper.MapperConfiguration(cfg =>
-            {
-                cfg.AddProfile(new AutoMapperService());
-                cfg.AddProfile(new AutoMapperRepository());
-                cfg.AddProfile(new AutoMapperApi());
+            {  
+                cfg.AddProfile(new RepositoryProfile());
+                cfg.AddProfile(new ApiProfile());
             });
             var mapper = config.CreateMapper();
             services.AddSingleton(mapper);
             // Autofac
             var builder = new ContainerBuilder();
             builder.Populate(services);
-            builder.RegisterType<MakeService>().As<IMakeService>();
-            builder.RegisterType<ModelService>().As<IModelService>();
-            builder.RegisterType<MakeRepository>().As<IMakeRepository>();
-            builder.RegisterType<ModelRepository>().As<IModelRepository>();
-            builder.RegisterType<Repository<VehicleMake>>().As<IRepository<VehicleMake>>();
-            builder.RegisterType<Repository<VehicleModel>>().As<IRepository<VehicleModel>>();
-            builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+            builder.RegisterModule(new ServiceModule());
+            builder.RegisterModule(new RepositoryModule());
             this.ApplicationContainer = builder.Build();
             // Create the IServiceProvider based on the container.
             return new AutofacServiceProvider(this.ApplicationContainer);
-
-         
-          
-           
             
         }
 

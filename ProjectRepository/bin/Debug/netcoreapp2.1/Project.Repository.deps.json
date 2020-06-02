@@ -14,7 +14,8 @@
           "Autofac.Extensions.DependencyInjection": "6.0.0",
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
-          "Project.Repository.Common": "1.0.0"
+          "Project.Repository.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
         },
         "runtime": {
           "Project.Repository.dll": {}
@@ -591,6 +592,14 @@
         "runtime": {
           "Project.Repository.Common.dll": {}
         }
+      },
+      "Project.Service.Common/1.0.0": {
+        "dependencies": {
+          "Project.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "Project.Service.Common.dll": {}
+        }
       }
     }
   },
@@ -1029,6 +1038,11 @@
       "sha512": ""
     },
     "Project.Repository.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Service.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
