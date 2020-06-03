@@ -8,7 +8,7 @@ namespace Project.Service.Common
 {
    public interface IModelService
     {
-        Task<List<IVehicleModelDomain>> GetAllModels();
+        Task<IEnumerable<IVehicleModelDomain>> GetAllModels();
         Task InsertModel(IVehicleModelDomain vehicleModel);
         Task UpdateModel(IVehicleModelDomain vehicleModel);
         Task DeleteModel(Guid? id);

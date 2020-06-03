@@ -12,6 +12,7 @@ namespace Project.Repository.DependencyResolver
         public RepositoryProfile()
         {
             CreateMap<IVehicleMakeDomain, VehicleMake>().ReverseMap();
+            CreateMap<IVehicleModelDomain, VehicleModel>().ReverseMap();
         }
     }
 }

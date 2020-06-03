@@ -1,4 +1,6 @@
-﻿using Project.Model.Common.DomainInterfaces;
+﻿using AutoMapper;
+using Project.DAL.DatabaseModels;
+using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common.IRepositories;
 using System;
 using System.Collections.Generic;
@@ -9,15 +11,27 @@ namespace Project.Repositories.Repository
 {
     public class ModelRepository : IModelRepository
     {
+        private readonly IRepository<VehicleModel> repository;
+        private readonly IMapper mapper;
+
+        public ModelRepository(IRepository<VehicleModel> _repository, IMapper _mapper)
+        {
+            repository = _repository;
+            mapper = _mapper;
+        }
+
+        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModels()
+        {
+            IEnumerable<IVehicleModelDomain> vehicles = mapper.Map<IEnumerable<IVehicleModelDomain>>(await repository.GetAll());
+            return vehicles;
+        }
+
         public Task DeleteModel(Guid? id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<IVehicleModelDomain>> GetAllModels()
-        {
-            throw new NotImplementedException();
-        }
+     
 
         public Task<IVehicleModelDomain> GetIdModel(Guid? id)
         {

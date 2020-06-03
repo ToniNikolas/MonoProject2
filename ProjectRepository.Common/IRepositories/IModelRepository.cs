@@ -8,7 +8,7 @@ namespace Project.Repository.Common.IRepositories
 {
    public interface IModelRepository
     {
-        Task<List<IVehicleModelDomain>> GetAllModels();
+        Task<IEnumerable<IVehicleModelDomain>> GetAllModels();
         Task InsertModel(IVehicleModelDomain vehicleModel);
         Task UpdateModel(IVehicleModelDomain vehicleModel);
         Task DeleteModel(Guid? id);

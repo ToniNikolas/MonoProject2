@@ -13,6 +13,7 @@ namespace Project.WebApi.DependencyResolver
         public ApiProfile()
         {
             CreateMap<IVehicleMakeDomain, VehicleMakeView>().ReverseMap();
+            CreateMap<IVehicleModelDomain, VehicleModelView>().ReverseMap();
         }
     }
 }

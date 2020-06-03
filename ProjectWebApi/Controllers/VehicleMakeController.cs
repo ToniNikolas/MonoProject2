@@ -25,7 +25,7 @@ namespace Project.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> GetAll()
         {
             IEnumerable<VehicleMakeView> items = mapper.Map<IEnumerable<VehicleMakeView>>(await service.GetAllMakes());
             return Ok(items);

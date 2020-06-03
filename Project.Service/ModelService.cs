@@ -1,4 +1,5 @@
 ﻿using Project.Model.Common.DomainInterfaces;
+using Project.Repository.Common;
 using Project.Service.Common;
 using System;
 using System.Collections.Generic;
@@ -9,14 +10,20 @@ namespace Project.Service
 {
     public class ModelService : IModelService
     {
+        private readonly IUnitOfWork unitOfWork;
+
+        public ModelService(IUnitOfWork _unitOfWork)
+        {
+            unitOfWork = _unitOfWork;
+        }
         public Task DeleteModel(Guid? id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<List<IVehicleModelDomain>> GetAllModels()
+        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModels()
         {
-            throw new NotImplementedException();
+            return await unitOfWork.Models.GetAllModels();
         }
 
         public Task<IVehicleModelDomain> GetIdModel(Guid? id)
