@@ -12,41 +12,40 @@ namespace Project.Service
 {
     public class MakeService : IMakeService
     {
-        private readonly IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public MakeService(IUnitOfWork _unitOfWork)
+        public MakeService(IUnitOfWork unitOfWork)
         {
-            unitOfWork = _unitOfWork;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
         {
-            return await unitOfWork.Makes.GetAllMakes();
+            return await _unitOfWork.Makes.GetAllMakes();
         }
 
-        public Task DeleteMake(Guid? id)
+        public async Task InsertMake(IVehicleMakeDomain vehicleMake)
         {
-            throw new NotImplementedException();
+           await _unitOfWork.Makes.InsertMake(vehicleMake);
+           await _unitOfWork.Complete();
         }
 
-        public Task<IVehicleMakeDomain> GetIdMake(Guid? id)
+        public async Task UpdateMake(IVehicleMakeDomain vehicleMake)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Makes.UpdateMake(vehicleMake);
+            await _unitOfWork.Complete();
         }
 
-        public List<IVehicleMakeDomain> GetMakeList()
+        public async Task DeleteMake(Guid? id)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Makes.DeleteMake(id);
+            await _unitOfWork.Complete();
         }
 
-        public Task InsertMake(IVehicleMakeDomain vehicleMake)
+        public async Task<IVehicleMakeDomain> GetIdMake(Guid? id)
         {
-            throw new NotImplementedException();
+         return  await _unitOfWork.Makes.GetIdMake(id);
         }
-
-        public Task UpdateMake(IVehicleMakeDomain vehicleMake)
-        {
-            throw new NotImplementedException();
-        }
+  
     }
 }

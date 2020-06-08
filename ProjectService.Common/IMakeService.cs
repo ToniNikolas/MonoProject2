@@ -13,6 +13,5 @@ namespace Project.Service.Common
         Task UpdateMake(IVehicleMakeDomain vehicleMake);
         Task DeleteMake(Guid? id);
         Task<IVehicleMakeDomain> GetIdMake(Guid? id);
-        List<IVehicleMakeDomain> GetMakeList();
     }
 }

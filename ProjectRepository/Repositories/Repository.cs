@@ -11,44 +11,43 @@ namespace Project.Repository.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly VehicleDbContext context;
-        private readonly DbSet<T> table;
+        private readonly VehicleDbContext _context;
+        //private readonly DbSet<T> table;
+       
 
-        public Repository(VehicleDbContext _context)
+        public Repository(VehicleDbContext context)
         {
-            context = _context;
-            table = context.Set<T>();
+            _context = context;
+        
+            //table = context.Set<T>();
         }
         public async Task<IEnumerable<T>> GetAll()
         {
-          IEnumerable<T> vehicles = await table.ToListAsync(); 
+          IEnumerable<T> vehicles = await _context.Set<T>().ToListAsync(); 
           return vehicles;
         }
-
-        public Task Delete(Guid? id)
+        public async Task Insert(T vehicleMake)
         {
-            throw new NotImplementedException();
+           await _context.Set<T>().AddAsync(vehicleMake);
         }
 
+        public async Task Update(T vehicleMake)
+        {
+            _context.Set<T>().Update(vehicleMake);    
+        }
+
+        public async Task Delete(Guid? id)
+        {
+            T vehicle = await _context.Set<T>().FindAsync(id);
+            _context.Set<T>().Remove(vehicle);   
+        }
+
+        public async Task<T> GetId(Guid? id)
+        {
+            T vehicle = await _context.Set<T>().FindAsync(id);
+            _context.Entry(vehicle).State = EntityState.Detached;
+            return vehicle;
+        }
        
-        public Task<T> GetId(Guid? id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<T> GetMakeList()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task Insert(T vehicleMake)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task Update(T vehicleMake)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

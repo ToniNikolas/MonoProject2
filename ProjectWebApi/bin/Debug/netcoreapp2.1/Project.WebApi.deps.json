@@ -34,6 +34,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.9",
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
+          "Project.Model": "1.0.0",
           "Project.Repository": "1.0.0",
           "Project.Repository.Common": "1.0.0",
           "Project.Service": "1.0.0",
@@ -614,6 +615,17 @@
         },
         "compile": {
           "Project.DAL.Common.dll": {}
+        }
+      },
+      "Project.Model/1.0.0": {
+        "dependencies": {
+          "Project.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "Project.Model.dll": {}
+        },
+        "compile": {
+          "Project.Model.dll": {}
         }
       },
       "Project.Model.Common/1.0.0": {
@@ -3854,6 +3866,11 @@
       "sha512": ""
     },
     "Project.DAL.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -10,35 +10,40 @@ namespace Project.Service
 {
     public class ModelService : IModelService
     {
-        private readonly IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ModelService(IUnitOfWork _unitOfWork)
+        public ModelService(IUnitOfWork unitOfWork)
         {
-            unitOfWork = _unitOfWork;
-        }
-        public Task DeleteModel(Guid? id)
-        {
-            throw new NotImplementedException();
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<IEnumerable<IVehicleModelDomain>> GetAllModels()
         {
-            return await unitOfWork.Models.GetAllModels();
+            return await _unitOfWork.Models.GetAllModels();
         }
 
-        public Task<IVehicleModelDomain> GetIdModel(Guid? id)
+        public async Task InsertModel(IVehicleModelDomain vehicleModel)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Models.InsertModel(vehicleModel);
+            await _unitOfWork.Complete();
         }
 
-        public Task InsertModel(IVehicleModelDomain vehicleModel)
+        public async Task UpdateModel(IVehicleModelDomain vehicleModel)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Models.UpdateModel(vehicleModel);
+            await _unitOfWork.Complete();
         }
 
-        public Task UpdateModel(IVehicleModelDomain vehicleModel)
+        public async Task DeleteModel(Guid? id)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Models.DeleteModel(id);
+            await _unitOfWork.Complete();
         }
+
+        public async Task<IVehicleModelDomain> GetIdModel(Guid? id)
+        {
+            return await _unitOfWork.Models.GetIdModel(id);
+        }
+       
     }
 }

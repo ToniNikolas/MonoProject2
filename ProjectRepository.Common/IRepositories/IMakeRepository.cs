@@ -13,6 +13,5 @@ namespace Project.Repository.Common.IRepositories
         Task UpdateMake(IVehicleMakeDomain vehicleMake);
         Task DeleteMake(Guid? id);
         Task<IVehicleMakeDomain> GetIdMake(Guid? id);
-        List<IVehicleMakeDomain> GetMakeList();
     }
 }

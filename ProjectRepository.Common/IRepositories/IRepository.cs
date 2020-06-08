@@ -13,6 +13,5 @@ namespace Project.Repository.Common.IRepositories
         Task Update(T entity);
         Task Delete(Guid? id);
         Task<T> GetId(Guid? id);
-        List<T> GetMakeList();
     }
 }

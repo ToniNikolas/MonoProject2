@@ -11,41 +11,43 @@ namespace Project.Repositories.Repository
 {
     public class ModelRepository : IModelRepository
     {
-        private readonly IRepository<VehicleModel> repository;
-        private readonly IMapper mapper;
+        private readonly IRepository<VehicleModel> _repository;
+        private readonly IMapper _mapper;
 
-        public ModelRepository(IRepository<VehicleModel> _repository, IMapper _mapper)
+        public ModelRepository(IRepository<VehicleModel> repository, IMapper mapper)
         {
-            repository = _repository;
-            mapper = _mapper;
+            _repository = repository;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<IVehicleModelDomain>> GetAllModels()
         {
-            IEnumerable<IVehicleModelDomain> vehicles = mapper.Map<IEnumerable<IVehicleModelDomain>>(await repository.GetAll());
+            IEnumerable<IVehicleModelDomain> vehicles = _mapper.Map<IEnumerable<IVehicleModelDomain>>(await _repository.GetAll());
             return vehicles;
         }
 
-        public Task DeleteModel(Guid? id)
+        public async Task InsertModel(IVehicleModelDomain vehicleModel)
         {
-            throw new NotImplementedException();
+            VehicleModel vehicle = _mapper.Map<VehicleModel>(vehicleModel);
+            await _repository.Insert(vehicle);
         }
 
-     
-
-        public Task<IVehicleModelDomain> GetIdModel(Guid? id)
+        public async Task UpdateModel(IVehicleModelDomain vehicleModel)
         {
-            throw new NotImplementedException();
+            VehicleModel vehicle = _mapper.Map<VehicleModel>(vehicleModel);
+            await _repository.Update(vehicle);
         }
 
-        public Task InsertModel(IVehicleModelDomain vehicleModel)
+        public async Task DeleteModel(Guid? id)
         {
-            throw new NotImplementedException();
+            await _repository.Delete(id);
         }
 
-        public Task UpdateModel(IVehicleModelDomain vehicleModel)
+        public async Task<IVehicleModelDomain> GetIdModel(Guid? id)
         {
-            throw new NotImplementedException();
+            VehicleModel vehicle = await _repository.GetId(id);
+            return _mapper.Map<IVehicleModelDomain>(vehicle);
         }
+        
     }
 }

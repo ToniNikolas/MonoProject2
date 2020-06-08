@@ -16,44 +16,44 @@ namespace Project.Repositories.Repository
 {
     public class MakeRepository : IMakeRepository
     {
-        private readonly IRepository<VehicleMake> repository;
-        private readonly IMapper mapper;
+        private readonly IRepository<VehicleMake> _repository;
+        private readonly IMapper _mapper;
 
-        public MakeRepository(IRepository<VehicleMake> _repository, IMapper _mapper)
+        public MakeRepository(IRepository<VehicleMake> repository, IMapper mapper)
         {
-            repository = _repository;
-            mapper = _mapper;
+            _repository = repository;
+            _mapper = mapper;
         }
        
         public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
         {
-            IEnumerable<IVehicleMakeDomain> vehicles = mapper.Map<IEnumerable<IVehicleMakeDomain>>(await repository.GetAll());
-            return  vehicles;
+            IEnumerable<IVehicleMakeDomain> vehicles = _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await _repository.GetAll());
+             return  vehicles;
         }
 
-        public Task DeleteMake(Guid? id)
+        public async Task InsertMake(IVehicleMakeDomain vehicleMake)
         {
-            throw new NotImplementedException();
+          VehicleMake vehicle = _mapper.Map<VehicleMake>(vehicleMake);
+          await _repository.Insert(vehicle);
         }
 
-        public Task<IVehicleMakeDomain> GetIdMake(Guid? id)
+
+        public async Task UpdateMake(IVehicleMakeDomain vehicleMake)
         {
-            throw new NotImplementedException();
+            VehicleMake vehicle = _mapper.Map<VehicleMake>(vehicleMake);
+            await _repository.Update(vehicle);
         }
 
-        public List<IVehicleMakeDomain> GetMakeList()
+        public async Task DeleteMake(Guid? id)
         {
-            throw new NotImplementedException();
+            await _repository.Delete(id);
         }
 
-        public Task InsertMake(IVehicleMakeDomain vehicleMake)
+        public async Task<IVehicleMakeDomain> GetIdMake(Guid? id)
         {
-            throw new NotImplementedException();
+            VehicleMake vehicle = await _repository.GetId(id);
+            return _mapper.Map<IVehicleMakeDomain>(vehicle);
         }
 
-        public Task UpdateMake(IVehicleMakeDomain vehicleMake)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
