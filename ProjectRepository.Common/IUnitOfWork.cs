@@ -11,6 +11,7 @@ namespace Project.Repository.Common
     {
         IMakeRepository Makes {get;}
         IModelRepository Models { get; }
-        Task<int> Complete();
+       
+        Task<int> CompleteAsync();
     }
 }

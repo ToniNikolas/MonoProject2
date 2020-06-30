@@ -909,6 +909,16 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "Project.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Project.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Common.dll": {}
+        }
+      },
       "Project.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -942,6 +952,20 @@
         },
         "runtime": {
           "bin/placeholder/Project.Model.Common.dll": {}
+        }
+      },
+      "Project.Service.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Project.Common": "1.0.0",
+          "Project.Model.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Project.Service.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Service.Common.dll": {}
         }
       }
     }
@@ -3494,6 +3518,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Project.Common/1.0.0": {
+      "type": "project",
+      "path": "../Project.Common/Project.Common.csproj",
+      "msbuildProject": "../Project.Common/Project.Common.csproj"
+    },
     "Project.DAL/1.0.0": {
       "type": "project",
       "path": "../Project.DAL/Project.DAL.csproj",
@@ -3508,6 +3537,11 @@
       "type": "project",
       "path": "../ProjectModel.Common/Project.Model.Common.csproj",
       "msbuildProject": "../ProjectModel.Common/Project.Model.Common.csproj"
+    },
+    "Project.Service.Common/1.0.0": {
+      "type": "project",
+      "path": "../ProjectService.Common/Project.Service.Common.csproj",
+      "msbuildProject": "../ProjectService.Common/Project.Service.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3515,7 +3549,8 @@
       "Microsoft.NETCore.App >= 2.1.0",
       "Project.DAL >= 1.0.0",
       "Project.DAL.Common >= 1.0.0",
-      "Project.Model.Common >= 1.0.0"
+      "Project.Model.Common >= 1.0.0",
+      "Project.Service.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3556,6 +3591,9 @@
             },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectModel.Common\\Project.Model.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectModel.Common\\Project.Model.Common.csproj"
+            },
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\ProjectService.Common\\Project.Service.Common.csproj"
             }
           }
         }

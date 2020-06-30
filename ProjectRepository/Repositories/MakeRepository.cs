@@ -6,6 +6,8 @@ using Project.DAL.DatabaseModels;
 using Project.DAL.Migrations;
 using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common.IRepositories;
+using Project.Repository.Repositories;
+using Project.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,44 +16,42 @@ using System.Threading.Tasks;
 
 namespace Project.Repositories.Repository
 {
-    public class MakeRepository : IMakeRepository
+    public class MakeRepository : Repository<VehicleMake>, IMakeRepository 
     {
-        private readonly IRepository<VehicleMake> _repository;
         private readonly IMapper _mapper;
-
-        public MakeRepository(IRepository<VehicleMake> repository, IMapper mapper)
+     
+        public MakeRepository(IMapper mapper, VehicleDbContext _context):base(_context)
         {
-            _repository = repository;
             _mapper = mapper;
         }
        
-        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync()
         {
-            IEnumerable<IVehicleMakeDomain> vehicles = _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await _repository.GetAll());
-             return  vehicles;
+            IEnumerable<IVehicleMakeDomain> vehicles = _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await base.GetAllAsync());
+            return  vehicles;
         }
 
-        public async Task InsertMake(IVehicleMakeDomain vehicleMake)
+        public async Task InsertMakeAsync(IVehicleMakeDomain vehicleMake)
         {
           VehicleMake vehicle = _mapper.Map<VehicleMake>(vehicleMake);
-          await _repository.Insert(vehicle);
+          await base.InsertAsync(vehicle);
         }
 
 
-        public async Task UpdateMake(IVehicleMakeDomain vehicleMake)
+        public async Task UpdateMakeAsync(IVehicleMakeDomain vehicleMake)
         {
             VehicleMake vehicle = _mapper.Map<VehicleMake>(vehicleMake);
-            await _repository.Update(vehicle);
+            await base.UpdateAsync(vehicle);
         }
 
-        public async Task DeleteMake(Guid? id)
+        public async Task DeleteMakeAsync(Guid? id)
         {
-            await _repository.Delete(id);
+            await base.DeleteAsync(id);
         }
 
-        public async Task<IVehicleMakeDomain> GetIdMake(Guid? id)
+        public async Task<IVehicleMakeDomain> GetIdMakeAsync(Guid? id)
         {
-            VehicleMake vehicle = await _repository.GetId(id);
+            VehicleMake vehicle = await base.GetIdAsync(id);
             return _mapper.Map<IVehicleMakeDomain>(vehicle);
         }
 

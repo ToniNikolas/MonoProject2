@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
+using Project.Common;
 using Project.DAL.DatabaseModels;
+using Project.DAL.Migrations;
 using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common.IRepositories;
+using Project.Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,43 +12,42 @@ using System.Threading.Tasks;
 
 namespace Project.Repositories.Repository
 {
-    public class ModelRepository : IModelRepository
+    public class ModelRepository : Repository<VehicleModel>, IModelRepository
     {
-        private readonly IRepository<VehicleModel> _repository;
+        
         private readonly IMapper _mapper;
 
-        public ModelRepository(IRepository<VehicleModel> repository, IMapper mapper)
+        public ModelRepository(VehicleDbContext context, IMapper mapper) : base(context)
         {
-            _repository = repository;
-            _mapper = mapper;
+                   _mapper = mapper;
         }
 
-        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModels()
+        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModelsAsync()
         {
-            IEnumerable<IVehicleModelDomain> vehicles = _mapper.Map<IEnumerable<IVehicleModelDomain>>(await _repository.GetAll());
+            IEnumerable<IVehicleModelDomain> vehicles = _mapper.Map<IEnumerable<IVehicleModelDomain>>(await base.GetAllAsync());
             return vehicles;
         }
 
-        public async Task InsertModel(IVehicleModelDomain vehicleModel)
+        public async Task InsertModelAsync(IVehicleModelDomain vehicleModel)
         {
             VehicleModel vehicle = _mapper.Map<VehicleModel>(vehicleModel);
-            await _repository.Insert(vehicle);
+            await base.InsertAsync(vehicle);
         }
 
-        public async Task UpdateModel(IVehicleModelDomain vehicleModel)
+        public async Task UpdateModelAsync(IVehicleModelDomain vehicleModel)
         {
             VehicleModel vehicle = _mapper.Map<VehicleModel>(vehicleModel);
-            await _repository.Update(vehicle);
+            await base.UpdateAsync(vehicle);
         }
 
-        public async Task DeleteModel(Guid? id)
+        public async Task DeleteModelAsync(Guid? id)
         {
-            await _repository.Delete(id);
+            await base.DeleteAsync(id);
         }
 
-        public async Task<IVehicleModelDomain> GetIdModel(Guid? id)
+        public async Task<IVehicleModelDomain> GetIdModelAsync(Guid? id)
         {
-            VehicleModel vehicle = await _repository.GetId(id);
+            VehicleModel vehicle = await base.GetIdAsync(id);
             return _mapper.Map<IVehicleModelDomain>(vehicle);
         }
         

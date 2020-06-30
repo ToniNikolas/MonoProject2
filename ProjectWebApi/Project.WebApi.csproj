@@ -5,17 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\css\**" />
-    <Compile Remove="wwwroot\scripts\**" />
-    <Content Remove="wwwroot\css\**" />
-    <Content Remove="wwwroot\scripts\**" />
-    <EmbeddedResource Remove="wwwroot\css\**" />
-    <EmbeddedResource Remove="wwwroot\scripts\**" />
-    <None Remove="wwwroot\css\**" />
-    <None Remove="wwwroot\scripts\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Autofac" Version="5.2.0" />
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="6.0.0" />
     <PackageReference Include="AutoMapper" Version="9.0.0" />
@@ -36,12 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="App\Common\" />
-    <Folder Include="App\Layouts\" />
-    <Folder Include="App\Components\" />
-    <Folder Include="App\Stores\" />
-    <Folder Include="App\Pages\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="App\" />
   </ItemGroup>
 
 </Project>

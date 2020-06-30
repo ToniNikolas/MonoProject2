@@ -10,7 +10,8 @@
         "dependencies": {
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
-          "Project.Model.Common": "1.0.0"
+          "Project.Model.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
         },
         "runtime": {
           "Project.Repository.Common.dll": {}
@@ -501,6 +502,11 @@
           "System.Runtime": "4.1.0"
         }
       },
+      "Project.Common/1.0.0": {
+        "runtime": {
+          "Project.Common.dll": {}
+        }
+      },
       "Project.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
@@ -519,6 +525,15 @@
       "Project.Model.Common/1.0.0": {
         "runtime": {
           "Project.Model.Common.dll": {}
+        }
+      },
+      "Project.Service.Common/1.0.0": {
+        "dependencies": {
+          "Project.Common": "1.0.0",
+          "Project.Model.Common": "1.0.0"
+        },
+        "runtime": {
+          "Project.Service.Common.dll": {}
         }
       }
     }
@@ -900,6 +915,11 @@
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
     },
+    "Project.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Project.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -911,6 +931,11 @@
       "sha512": ""
     },
     "Project.Model.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Service.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,9 @@
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\bin\Debug\netcoreapp2.1\Project.Common.deps.json
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\bin\Debug\netcoreapp2.1\Project.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\bin\Debug\netcoreapp2.1\Project.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.csprojAssemblyReference.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.csproj.CoreCompileInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.AssemblyInfoInputs.cache
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.AssemblyInfo.cs
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\Project.Common\obj\Debug\netcoreapp2.1\Project.Common.pdb

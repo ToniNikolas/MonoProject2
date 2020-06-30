@@ -596,6 +596,14 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "Project.Common/1.0.0": {
+        "runtime": {
+          "Project.Common.dll": {}
+        },
+        "compile": {
+          "Project.Common.dll": {}
+        }
+      },
       "Project.DAL/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.1.1",
@@ -642,6 +650,7 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "Autofac": "5.2.0",
           "Autofac.Extensions.DependencyInjection": "6.0.0",
+          "Project.Common": "1.0.0",
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
           "Project.Repository.Common": "1.0.0",
@@ -658,7 +667,8 @@
         "dependencies": {
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
-          "Project.Model.Common": "1.0.0"
+          "Project.Model.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
         },
         "runtime": {
           "Project.Repository.Common.dll": {}
@@ -686,6 +696,7 @@
       },
       "Project.Service.Common/1.0.0": {
         "dependencies": {
+          "Project.Common": "1.0.0",
           "Project.Model.Common": "1.0.0"
         },
         "runtime": {
@@ -3859,6 +3870,11 @@
       "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "Project.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Project.DAL/1.0.0": {
       "type": "project",

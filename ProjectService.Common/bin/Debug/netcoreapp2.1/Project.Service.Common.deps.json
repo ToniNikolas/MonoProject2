@@ -8,10 +8,16 @@
     ".NETCoreApp,Version=v2.1": {
       "Project.Service.Common/1.0.0": {
         "dependencies": {
+          "Project.Common": "1.0.0",
           "Project.Model.Common": "1.0.0"
         },
         "runtime": {
           "Project.Service.Common.dll": {}
+        }
+      },
+      "Project.Common/1.0.0": {
+        "runtime": {
+          "Project.Common.dll": {}
         }
       },
       "Project.Model.Common/1.0.0": {
@@ -23,6 +29,11 @@
   },
   "libraries": {
     "Project.Service.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Project.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

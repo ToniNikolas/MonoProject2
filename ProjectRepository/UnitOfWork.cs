@@ -15,25 +15,47 @@ namespace Project.Repository
     public class UnitOfWork : IUnitOfWork
     {
         private readonly VehicleDbContext context;
-        
-        public UnitOfWork(VehicleDbContext _context, IMapper _mapper, IMakeRepository _makeRepository, IModelRepository _modelRepository)
-        {
-            context = _context;
-            Makes = _makeRepository;
-            Models = _modelRepository;
-        }
 
-        public IMakeRepository Makes { get; private set; }
-        public IModelRepository Models { get; private set; }
 
-        public async Task<int> Complete()
+        public UnitOfWork(VehicleDbContext _context,  IMakeRepository _makeRepository, IModelRepository _modelRepository)
+          {
+              context = _context;
+              Makes = _makeRepository;
+              Models = _modelRepository;
+          }
+
+            public IMakeRepository Makes { get; private set; }
+            public IModelRepository Models { get; private set; }
+
+        public async Task<int> CompleteAsync()
         {
             return await context.SaveChangesAsync();
         }
 
+        private bool disposed = false;
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!this.disposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            this.disposed = true;
+        }
+
         public void Dispose()
         {
-            context.Dispose();
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
+
+        /*public void Dispose()
+        {
+            context.Dispose();
+            GC.SuppressFinalize(this);
+        }*/
     }
 }

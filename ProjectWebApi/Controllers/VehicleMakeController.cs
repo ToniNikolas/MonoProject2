@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Project.Common;
 using Project.Model.Common.DomainInterfaces;
 using Project.Model.DomainModels;
 using Project.Service.Common;
@@ -27,24 +28,24 @@ namespace Project.WebApi.Controllers
             _service = service;
             _mapper = mapper;
         }
-
     
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<VehicleMakeView>>> GetAll()
+        public async Task<IActionResult> GetAllAsync(string sortOrder)
         {
-            IEnumerable<VehicleMakeView> vehicles = _mapper.Map<IEnumerable<VehicleMakeView>>(await _service.GetAllMakes());
+            
+            IEnumerable<VehicleMakeView> vehicles = _mapper.Map<IEnumerable<VehicleMakeView>>(await _service.GetAllMakesAsync());
             return Ok(vehicles);
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(VehicleMakeView vehicle)
+        public async Task<IActionResult> CreateAsync(VehicleMakeView vehicle)
         {
             try
             {
 
                 if(ModelState.IsValid)
                  {
-                    await _service.InsertMake(_mapper.Map<IVehicleMakeDomain>(vehicle));
+                    await _service.InsertMakeAsync(_mapper.Map<IVehicleMakeDomain>(vehicle));
                     return Ok();
                  }
               
@@ -57,11 +58,11 @@ namespace Project.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<VehicleMakeView>> Get(Guid? id)
+        public async Task<IActionResult> GetAsync(Guid? id)
         {
             if (id == null) { return BadRequest(); }
 
-            VehicleMakeView getVehicle = _mapper.Map<VehicleMakeView>(await _service.GetIdMake(id));
+            VehicleMakeView getVehicle = _mapper.Map<VehicleMakeView>(await _service.GetIdMakeAsync(id));
 
             if (getVehicle == null) { return NotFound(); }
 
@@ -71,7 +72,7 @@ namespace Project.WebApi.Controllers
 
         [HttpPut("{id}")]
     
-        public async Task<ActionResult> Update(Guid? id, VehicleMakeView vehicle)
+        public async Task<IActionResult> UpdateAsync(Guid? id, VehicleMakeView vehicle)
         {
 
             try
@@ -79,15 +80,13 @@ namespace Project.WebApi.Controllers
 
                 if (id == null) { return BadRequest(); }
 
-                IVehicleMakeDomain vehicleUpdate =await _service.GetIdMake(vehicle.Id);
+                IVehicleMakeDomain vehicleUpdate =await _service.GetIdMakeAsync(vehicle.Id);
 
                 if (vehicleUpdate == null){return NotFound();}
 
                 if (ModelState.IsValid)
                 {
-                    vehicleUpdate.Name = vehicle.Name;
-                    vehicleUpdate.Abrv = vehicle.Abrv;
-                    await _service.UpdateMake(vehicleUpdate);
+                    await _service.UpdateMakeAsync(_mapper.Map<IVehicleMakeDomain>(vehicle));
                 }
 
             }
@@ -101,7 +100,7 @@ namespace Project.WebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(Guid? id)
+        public async Task<IActionResult> DeleteAsync(Guid? id)
         {
             try
             {
@@ -110,7 +109,7 @@ namespace Project.WebApi.Controllers
                     return BadRequest();
                }
 
-                await _service.DeleteMake(id);
+                await _service.DeleteMakeAsync(id);
             }
             catch
             {

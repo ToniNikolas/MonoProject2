@@ -1,4 +1,5 @@
-﻿using Project.Model.Common.DomainInterfaces;
+﻿using Project.Common;
+using Project.Model.Common.DomainInterfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,10 +9,10 @@ namespace Project.Repository.Common.IRepositories
 {
    public interface IRepository<T> where T:class
     {
-        Task<IEnumerable<T>> GetAll();
-        Task Insert(T entity);
-        Task Update(T entity);
-        Task Delete(Guid? id);
-        Task<T> GetId(Guid? id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task InsertAsync(T entity);
+        Task UpdateAsync(T entity);
+        Task DeleteAsync(Guid? id);
+        Task<T> GetIdAsync(Guid? id);
     }
 }

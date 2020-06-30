@@ -1,4 +1,5 @@
-﻿using Project.Model.Common.DomainInterfaces;
+﻿using Project.Common;
+using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common;
 using Project.Repository.Common.IRepositories;
 using Project.Service.Common;
@@ -13,38 +14,44 @@ namespace Project.Service
     public class MakeService : IMakeService
     {
         private readonly IUnitOfWork _unitOfWork;
+      
 
-        public MakeService(IUnitOfWork unitOfWork)
+        public MakeService(IUnitOfWork unitOfWork, IMakeRepository makeRepository)
         {
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakes()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync()
         {
-            return await _unitOfWork.Makes.GetAllMakes();
+            return await _unitOfWork.Makes.GetAllMakesAsync();
+          
         }
 
-        public async Task InsertMake(IVehicleMakeDomain vehicleMake)
+        public async Task InsertMakeAsync(IVehicleMakeDomain vehicleMake)
         {
-           await _unitOfWork.Makes.InsertMake(vehicleMake);
-           await _unitOfWork.Complete();
+            await _unitOfWork.Makes.InsertMakeAsync(vehicleMake);
+            await _unitOfWork.CompleteAsync();
+        
         }
 
-        public async Task UpdateMake(IVehicleMakeDomain vehicleMake)
+        public async Task UpdateMakeAsync(IVehicleMakeDomain vehicleMake)
         {
-            await _unitOfWork.Makes.UpdateMake(vehicleMake);
-            await _unitOfWork.Complete();
+            await _unitOfWork.Makes.UpdateMakeAsync(vehicleMake);
+            await _unitOfWork.CompleteAsync();
+            
         }
 
-        public async Task DeleteMake(Guid? id)
+        public async Task DeleteMakeAsync(Guid? id)
         {
-            await _unitOfWork.Makes.DeleteMake(id);
-            await _unitOfWork.Complete();
+            await _unitOfWork.Makes.DeleteMakeAsync(id);
+            await _unitOfWork.CompleteAsync();
+       
         }
 
-        public async Task<IVehicleMakeDomain> GetIdMake(Guid? id)
+        public async Task<IVehicleMakeDomain> GetIdMakeAsync(Guid? id)
         {
-         return  await _unitOfWork.Makes.GetIdMake(id);
+            return  await _unitOfWork.Makes.GetIdMakeAsync(id);
+          
         }
   
     }

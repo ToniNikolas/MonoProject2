@@ -64,6 +64,12 @@ namespace ProjectWebApi
             return new AutofacServiceProvider(this.ApplicationContainer);
             
         }
+       
+       
+            
+           
+           
+       
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -77,9 +83,14 @@ namespace ProjectWebApi
                 app.UseHsts();
             }
 
-            app.UseDefaultFiles();
+           // app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
+            app.UseCors(builder => builder
+           .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+           .AllowCredentials());
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Model.Common", "Pro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.DAL", "Project.DAL\Project.DAL.csproj", "{06BA4C08-B1C6-4430-8C1F-B6768AD6CE35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Service", "Project.Service\Project.Service.csproj", "{F07E7EA3-488C-4980-9C41-EFBE4D75A9EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.Service", "Project.Service\Project.Service.csproj", "{F07E7EA3-488C-4980-9C41-EFBE4D75A9EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.DAL.Common", "Project.DAL.Common\Project.DAL.Common.csproj", "{0F29A610-D0AB-4D8D-BF8A-F78BBEDC1727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project.DAL.Common", "Project.DAL.Common\Project.DAL.Common.csproj", "{0F29A610-D0AB-4D8D-BF8A-F78BBEDC1727}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project.Common", "Project.Common\Project.Common.csproj", "{F9940298-B96B-41D1-B48E-1C2366F9D3C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{0F29A610-D0AB-4D8D-BF8A-F78BBEDC1727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F29A610-D0AB-4D8D-BF8A-F78BBEDC1727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F29A610-D0AB-4D8D-BF8A-F78BBEDC1727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9940298-B96B-41D1-B48E-1C2366F9D3C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9940298-B96B-41D1-B48E-1C2366F9D3C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9940298-B96B-41D1-B48E-1C2366F9D3C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9940298-B96B-41D1-B48E-1C2366F9D3C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

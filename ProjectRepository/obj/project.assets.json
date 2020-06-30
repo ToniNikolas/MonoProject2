@@ -979,6 +979,16 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
+      "Project.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Project.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Project.Common.dll": {}
+        }
+      },
       "Project.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
@@ -1020,7 +1030,8 @@
         "dependencies": {
           "Project.DAL": "1.0.0",
           "Project.DAL.Common": "1.0.0",
-          "Project.Model.Common": "1.0.0"
+          "Project.Model.Common": "1.0.0",
+          "Project.Service.Common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Project.Repository.Common.dll": {}
@@ -1033,6 +1044,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
+          "Project.Common": "1.0.0",
           "Project.Model.Common": "1.0.0"
         },
         "compile": {
@@ -3768,6 +3780,11 @@
         "system.threading.tasks.nuspec"
       ]
     },
+    "Project.Common/1.0.0": {
+      "type": "project",
+      "path": "../Project.Common/Project.Common.csproj",
+      "msbuildProject": "../Project.Common/Project.Common.csproj"
+    },
     "Project.DAL/1.0.0": {
       "type": "project",
       "path": "../Project.DAL/Project.DAL.csproj",
@@ -3801,6 +3818,7 @@
       "Autofac >= 5.2.0",
       "Autofac.Extensions.DependencyInjection >= 6.0.0",
       "Microsoft.NETCore.App >= 2.1.0",
+      "Project.Common >= 1.0.0",
       "Project.DAL >= 1.0.0",
       "Project.DAL.Common >= 1.0.0",
       "Project.Repository.Common >= 1.0.0",
@@ -3837,6 +3855,9 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
+            "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.Common.csproj": {
+              "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.Common\\Project.Common.csproj"
+            },
             "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj": {
               "projectPath": "C:\\Users\\tonin\\OneDrive\\Desktop\\backup\\ProjectWebApi\\Project.DAL.Common\\Project.DAL.Common.csproj"
             },

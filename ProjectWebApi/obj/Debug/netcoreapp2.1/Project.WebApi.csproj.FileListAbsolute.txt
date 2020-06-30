@@ -26,6 +26,8 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\net
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.WebApi.Views.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.DAL.Common.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.DAL.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Repository.Common.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Repository.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Service.Common.dll
@@ -33,9 +35,11 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\net
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.DAL.Common.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.DAL.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Service.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Repository.Common.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Repository.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Service.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.csprojAssemblyReference.cache
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.csproj.CoreCompileInputs.cache
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.RazorAssemblyInfo.cache
@@ -52,7 +56,5 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\net
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.csproj.CopyComplete
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\obj\Debug\netcoreapp2.1\Project.WebApi.pdb
-C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.dll
-C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.Common.pdb
-C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.dll
-C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Model.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectWebApi\bin\Debug\netcoreapp2.1\Project.Common.pdb
