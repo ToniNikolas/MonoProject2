@@ -6,6 +6,8 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project.Common;
+using Project.Common.Functionalities;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using Project.Service.Common;
 using Project.WebApi.ViewModels;
@@ -24,12 +26,20 @@ namespace Project.WebApi.Controllers
             _service = service;
             _mapper = mapper;
         }
-        public async Task<IActionResult> GetAllAsync(string sortOrder)
+        public async Task<IActionResult> GetAllAsync(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
             Sorting sorting = new Sorting();
-            sorting.SortOrder = sortOrder;
-            IEnumerable<VehicleModelView> items = _mapper.Map<IEnumerable<VehicleModelView>>(await _service.GetAllModelsAsync());
-            return Ok(items);
+            Searching searching = new Searching();
+            if (searchString != null) { pageNumber = 1; }
+            else { searchString = currentFilter; }
+            PaginatedList<VehicleModel> paging = new PaginatedList<VehicleModel>();
+            sorting.SortString = sortOrder;
+            searching.SearchingString = searchString;
+            paging.PageNumber = pageNumber ?? 1;
+
+            IEnumerable<VehicleModelView> items = _mapper.Map<IEnumerable<VehicleModelView>>(await _service.GetAllModelsAsync(sorting,searching,paging));
+            PaginatedList<VehicleModelView> getPaginatedList = new PaginatedList<VehicleModelView>(items, paging.PageCount, paging.PageNumber, Strings.PageSize);
+            return Ok(getPaginatedList);
         }
 
         [HttpPost]

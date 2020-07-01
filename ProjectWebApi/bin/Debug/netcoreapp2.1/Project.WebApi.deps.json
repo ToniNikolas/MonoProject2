@@ -597,6 +597,10 @@
         }
       },
       "Project.Common/1.0.0": {
+        "dependencies": {
+          "Project.DAL": "1.0.0",
+          "Project.DAL.Common": "1.0.0"
+        },
         "runtime": {
           "Project.Common.dll": {}
         },

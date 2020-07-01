@@ -7,6 +7,9 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Project.Common;
+using Project.Common.Functionalities;
+using Project.DAL.Common.DatabaseInterfaces;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using Project.Model.DomainModels;
 using Project.Service.Common;
@@ -30,11 +33,20 @@ namespace Project.WebApi.Controllers
         }
     
         [HttpGet]
-        public async Task<IActionResult> GetAllAsync(string sortOrder)
+        public async Task<IActionResult> GetAllAsync(string sortOrder,string currentFilter, string searchString, int? pageNumber)
         {
-            
-            IEnumerable<VehicleMakeView> vehicles = _mapper.Map<IEnumerable<VehicleMakeView>>(await _service.GetAllMakesAsync());
-            return Ok(vehicles);
+            Sorting sorting = new Sorting();
+            Searching searching = new Searching();
+            if (searchString != null) { pageNumber = 1; }
+            else { searchString = currentFilter; }
+            PaginatedList<VehicleMake> paging = new PaginatedList<VehicleMake>();
+            sorting.SortString = sortOrder;
+            searching.SearchingString = searchString;
+            paging.PageNumber = pageNumber ?? 1;
+
+            IEnumerable<VehicleMakeView> items = _mapper.Map<IEnumerable<VehicleMakeView>>(await _service.GetAllMakesAsync(sorting,searching,paging));
+            PaginatedList<VehicleMakeView> getPaginatedList = new PaginatedList<VehicleMakeView>(items, paging.PageCount, paging.PageNumber, Strings.PageSize);
+            return Ok(getPaginatedList);
         }
 
         [HttpPost]

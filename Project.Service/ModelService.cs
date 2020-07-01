@@ -1,4 +1,6 @@
 ﻿using Project.Common;
+using Project.Common.Functionalities;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common;
 using Project.Repository.Common.IRepositories;
@@ -19,9 +21,9 @@ namespace Project.Service
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModelsAsync()
+        public async Task<IEnumerable<IVehicleModelDomain>> GetAllModelsAsync(Sorting sorting, Searching searching, PaginatedList<VehicleModel> paging)
         {
-            return await _unitOfWork.Models.GetAllModelsAsync();
+            return await _unitOfWork.Models.GetAllModelsAsync(sorting, searching,paging);
         }
 
         public async Task InsertModelAsync(IVehicleModelDomain vehicleModel)

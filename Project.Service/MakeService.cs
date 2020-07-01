@@ -1,4 +1,6 @@
 ﻿using Project.Common;
+using Project.Common.Functionalities;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using Project.Repository.Common;
 using Project.Repository.Common.IRepositories;
@@ -21,11 +23,13 @@ namespace Project.Service
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync(Sorting sorting, Searching searching, PaginatedList<VehicleMake> paging)
         {
-            return await _unitOfWork.Makes.GetAllMakesAsync();
+            return await _unitOfWork.Makes.GetAllMakesAsync(sorting,searching,paging);
           
         }
+
+      
 
         public async Task InsertMakeAsync(IVehicleMakeDomain vehicleMake)
         {
@@ -53,6 +57,7 @@ namespace Project.Service
             return  await _unitOfWork.Makes.GetIdMakeAsync(id);
           
         }
-  
+
+        
     }
 }

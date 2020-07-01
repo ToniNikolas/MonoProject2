@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Project.Common.Functionalities;
 using Project.Model.Common.DomainInterfaces;
 using Project.WebApi.ViewModels;
 using System;

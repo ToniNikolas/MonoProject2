@@ -1,4 +1,6 @@
 ﻿using Project.Common;
+using Project.Common.Functionalities;
+using Project.DAL.DatabaseModels;
 using Project.Model.Common.DomainInterfaces;
 using System;
 using System.Collections.Generic;
@@ -9,7 +11,7 @@ namespace Project.Repository.Common.IRepositories
 {
    public interface IModelRepository
     {
-        Task<IEnumerable<IVehicleModelDomain>> GetAllModelsAsync();
+        Task<IEnumerable<IVehicleModelDomain>> GetAllModelsAsync(Sorting sorting, Searching searching, PaginatedList<VehicleModel> paging);
         Task InsertModelAsync(IVehicleModelDomain vehicleModel);
         Task UpdateModelAsync(IVehicleModelDomain vehicleModel);
         Task DeleteModelAsync(Guid? id);

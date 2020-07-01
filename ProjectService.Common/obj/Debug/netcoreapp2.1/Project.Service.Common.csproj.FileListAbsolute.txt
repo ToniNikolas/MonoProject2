@@ -21,3 +21,7 @@ C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\obj\D
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\obj\Debug\netcoreapp2.1\Project.Service.Common.pdb
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.Common.dll
 C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.Common.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.DAL.Common.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.DAL.dll
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.DAL.pdb
+C:\Users\tonin\OneDrive\Desktop\backup\ProjectWebApi\ProjectService.Common\bin\Debug\netcoreapp2.1\Project.DAL.Common.pdb

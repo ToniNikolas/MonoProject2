@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Project.Common.Functionalities;
+using System.Linq.Expressions;
 
 namespace Project.Repositories.Repository
 {
@@ -25,10 +27,22 @@ namespace Project.Repositories.Repository
             _mapper = mapper;
         }
        
-        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync()
+        public async Task<IEnumerable<IVehicleMakeDomain>> GetAllMakesAsync(Sorting sorting, Searching searching, PaginatedList<VehicleMake> paging)
         {
-            IEnumerable<IVehicleMakeDomain> vehicles = _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await base.GetAllAsync());
-            return  vehicles;
+            SortBy sortBy = new SortBy();
+            SearchBy searchBy = new SearchBy();
+            Func<IQueryable<VehicleMake>, IOrderedQueryable<VehicleMake>> sort = sortBy.MakeOrderBy(sorting.SortString);
+            
+            if (!String.IsNullOrWhiteSpace(searching.SearchingString))
+            { 
+            Expression<Func<VehicleMake, bool>> search = searchBy.MakeSearchBy(searching.SearchingString);
+            return _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await base.GetAllAsync(sort,paging,search));     
+            }
+
+            else
+            {
+                return _mapper.Map<IEnumerable<IVehicleMakeDomain>>(await base.GetAllAsync(sort,paging));
+            }
         }
 
         public async Task InsertMakeAsync(IVehicleMakeDomain vehicleMake)
